@@ -1,0 +1,82 @@
+body {
+    --background-color-light: 255, 255, 255;
+    --background-color-dark: 0, 0, 0;
+    --text-color-light: 0, 0, 0;
+    --text-color-dark: 255, 255, 255;
+    --is-dark-mode: 0;
+    transition: color 0.5s ease, background-color 0.5s ease;
+    color: rgb(var(--text-color-light));
+    background-color: rgb(var(--background-color-light));
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#toggleMode {
+    cursor: pointer;
+}
+
+#content {
+    padding: 20px;
+    display: none; /* Initially hide the content */
+    font-family: 'Arial', sans-serif; /* Change to your desired font-family */
+    font-size: 18px; /* Change to your desired font size */
+}
+
+#content.visible {
+    display: block; /* Show the content when the 'visible' class is present */
+}
+
+h1 {
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, font-family 0.3s ease-in-out;
+    margin: 0;
+}
+
+h1:hover {
+    transform: scale(1.2) rotate(360deg);
+    color: rgb(255, 0, 0);
+    font-family: 'Courier New', monospace;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-item {
+    cursor: pointer;
+    margin: 10px 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.menu-item:hover {
+    color: #ff4500; /* Change to your preferred color */
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+/* Add your bounce animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
